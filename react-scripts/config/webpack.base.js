@@ -2,22 +2,22 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { resolve } from 'path'
 
 export default {
-  entry: './src/index.jsx',
+  entry: './src/index.js',
   output: {
     path: resolve('./dist'),
     filename: '[name].[chunkhash].js',
   },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: {
-          loader: 'babel-loader',
-        },
-        exclude: /node_modules/,
-      },
-    ],
-  },
+  // module: {
+  // rules: [
+  //   {
+  //     test: /\.jsx?$/,
+  //     use: {
+  //       loader: 'babel-loader',
+  //     },
+  //     exclude: /node_modules/,
+  //   },
+  // ],
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
