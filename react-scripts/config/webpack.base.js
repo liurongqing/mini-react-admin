@@ -7,16 +7,17 @@ export default {
     path: resolve('./dist'),
     filename: '[name].[chunkhash].js',
   },
-  // module: {
-  // rules: [
-  //   {
-  //     test: /\.jsx?$/,
-  //     use: {
-  //       loader: 'babel-loader',
-  //     },
-  //     exclude: /node_modules/,
-  //   },
-  // ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  // resolve: {
+  //   extensions: ['*', '.js', '.jsx'],
   // },
   plugins: [
     new HtmlWebpackPlugin({
