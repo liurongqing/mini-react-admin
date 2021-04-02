@@ -12,17 +12,17 @@ export default () => {
     plugins: [
       ...baseConfig.plugins,
       new CleanWebpackPlugin(),
-      new CopyPlugin({
-        patterns: [
-          {
-            from: 'public',
-            to: './',
-            globOptions: {
-              ignore: [resolve('public/index.html')],
-            },
-          },
-        ],
-      }),
+      // new CopyPlugin({
+      //   patterns: [
+      //     {
+      //       from: 'public',
+      //       to: './',
+      //       globOptions: {
+      //         ignore: [resolve('public/index.html')],
+      //       },
+      //     },
+      //   ],
+      // }),
     ],
   }
 
