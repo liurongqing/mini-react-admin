@@ -8,9 +8,6 @@
   "bin": {
     "react-scripts": "./bin/react-scripts.js"
   },
-  "scripts": {
-    "start": "webpack --config ./config/webpack.prod.js"
-  },
   "type": "module",
   "license": "MIT",
   "devDependencies": {

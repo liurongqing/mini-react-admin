@@ -2,7 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { resolve } from 'path'
 
 export default {
-  // entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: resolve('./dist'),
     filename: '[name].[chunkhash].js',
@@ -11,7 +11,9 @@ export default {
     rules: [
       {
         test: /\.jsx?$/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+        },
         exclude: /node_modules/,
       },
     ],
